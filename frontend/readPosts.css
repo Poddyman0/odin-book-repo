@@ -1,0 +1,116 @@
+#posts-body {
+    font-size: 125%;
+    height: 100%;
+    width: 100%;
+    color: black;
+}    
+
+
+#conversations-display {
+    padding: 2%;
+    height: 100%;
+
+}
+
+.card-body {
+    border-radius: 12px;
+    padding: 2%;
+    border: 1px solid rgb(28, 91, 23);
+    width: 100%;
+
+}
+
+#post-display {
+    border: 7px solid grey
+}
+
+#posts-title {
+padding-top: 10%;
+text-align: center;
+}
+
+#create-convo-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#post-username-photo-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#post-profile-picture{
+    width: 33%;
+    border-radius: 50%;
+    padding: 2%;
+
+}
+
+
+#post-immage {
+    width: 100%
+}
+
+#comment-profile-picture {
+    width: 20%;
+    border-radius: 50%;
+    padding: 2%;
+}
+
+#comments-display-user-comment {
+    display: flex;
+    flex-direction: column;
+    padding: 1%;
+    background-color: rgb(210, 210, 210);
+    width: 75%;
+    border-radius: 10px;
+}
+
+#comments-display {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+
+.like-button {
+    width: 49%;
+    border: 5px solid white;
+    border-radius: 20px;
+    font-size: 100%;
+}
+
+.comment-button {
+    width: 49%;
+    border: 5px solid white;
+    border-radius: 20px;
+    font-size: 100%;
+}
+
+#post-profile-picture-comment {
+    width: 15%;
+    border-radius: 50%;
+    padding: 2%;
+}
+
+.comment-input {
+    border-radius: 20px;
+    background-color: rgb(213, 210, 210);
+}
+
+#comment-form {
+    display: flex;
+    flex-direction: row;
+    padding: 1%;
+}
+
+.comment-submit {
+    width: 20%
+}
+#create-post-button {
+    width: 100%
+}
