@@ -54,7 +54,7 @@ function signInForm() {
                     const userTokenSignedIn = localStorage.getItem('userTokenSignedIn');
                     console.log("userTokenSignedIn", userTokenSignedIn)
                     console.log("response 3", response)
-                   // window.location.href = "readProfile.html"
+                   window.location.href = "readProfile.html"
 
                 })
                 .catch(error => {
