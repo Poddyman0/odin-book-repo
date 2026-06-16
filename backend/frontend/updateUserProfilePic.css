@@ -1,0 +1,27 @@
+#upddate-conversation-body {
+    font-size: 125%;
+    height: 100%;
+    width: 100%;
+    padding: 7%
+}
+
+#form-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#update-conversation-form {
+    border-radius: 12px;
+    width: 100%;
+}
+
+#btn-update-profile-pic {
+    width: 100%
+}
+
+#profile-picture-id {
+    width: 33%;
+    border-radius: 50%;
+    padding: 2%;
+}
