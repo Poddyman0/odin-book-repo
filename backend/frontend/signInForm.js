@@ -14,7 +14,7 @@ function signInForm() {
         let responseProfileID = ""
         console.log("emailSignIn.value", emailSignIn.value)
         console.log("encodeURIComponent(emailSignIn.value)",  encodeURIComponent(emailSignIn.value))
-        fetch(`http://localhost:3000/socialMediaApp/user/get/auserEmail/${encodeURIComponent(emailSignIn.value)}`, {
+        fetch(`${window.location.origin}/socialMediaApp/user/get/auserEmail/${encodeURIComponent(emailSignIn.value)}`, {
             method: 'GET', 
             headers: {
             'Content-Type': 'application/json',
@@ -24,7 +24,7 @@ function signInForm() {
         .then(response => {
             console.log("1", response)
             responseProfileID = `${response.profile[0]._id}`
-            fetch(`http://localhost:3000/socialMediaApp/user/put/signin/${response.profile[0]._id}/JWTBycrypt`, {
+            fetch(`${window.location.origin}/socialMediaApp/user/put/signin/${response.profile[0]._id}/JWTBycrypt`, {
                 method: 'POST',
                 headers: {
                 'Content-Type': 'application/json',
@@ -41,7 +41,7 @@ function signInForm() {
                 const userTokenSignedIn = localStorage.getItem('userTokenSignedIn');
 
                 //
-                fetch(`http://localhost:3000/socialMediaApp/user/put/signin/${responseProfileID}/passport`, {
+                fetch(`${window.location.origin}/socialMediaApp/user/put/signin/${responseProfileID}/passport`, {
                 method: 'POST',
                 headers: {
                 'Content-Type': 'application/json',
