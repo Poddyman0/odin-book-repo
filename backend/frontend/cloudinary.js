@@ -15,7 +15,7 @@ function getImage ( ) {
           const formData = new FormData();
           formData.append("image", file);
       
-          fetch(`http://localhost:3000/socialMediaApp/`, {
+          fetch(`odin-book-repo-production.up.railway.app/socialMediaApp/`, {
             method: "POST",
             headers: {
               'Authorization': `Bearer ${userTokenSignedIn}`

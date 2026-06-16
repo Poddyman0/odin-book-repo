@@ -17,7 +17,7 @@ function readConversations() {
 
         const userId = localStorage.getItem('userIDSignedIn');
         const userTokenSignedIn = localStorage.getItem('userTokenSignedIn');
-        fetch(`http://localhost:3000/socialMediaApp/post/get/posts/${userId}`, {
+        fetch(`odin-book-repo-production.up.railway.app/socialMediaApp/post/get/posts/${userId}`, {
             method: 'GET',
             headers: {
             'Content-Type': 'aapplication/json',
@@ -124,7 +124,7 @@ function createComment (commentValue, postID) {
         comment: commentValue
     }
 
-    fetch(`http://localhost:3000/socialMediaApp/post/post/${postID}/usercommentpost`, {
+    fetch(`odin-book-repo-production.up.railway.app/socialMediaApp/post/post/${postID}/usercommentpost`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -156,7 +156,7 @@ function createLike (postID) {
         userID: userId
     }
 
-    fetch(`http://localhost:3000/socialMediaApp/post/post/${postID}/likepost`, {
+    fetch(`odin-book-repo-production.up.railway.app/socialMediaApp/post/post/${postID}/likepost`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -16,7 +16,7 @@ function getProfileAndPosts() {
     const userId = localStorage.getItem('userIDSignedIn');
     const userTokenSignedIn = localStorage.getItem('userTokenSignedIn');
 
-    fetch(`http://localhost:3000/socialMediaApp/user/get/${userId}/getuserandposts`, {
+    fetch(`odin-book-repo-production.up.railway.app/socialMediaApp/user/get/${userId}/getuserandposts`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -247,7 +247,7 @@ function getProfileAndPosts() {
             comment: commentValue
         }
     
-        fetch(`http://localhost:3000/socialMediaApp/post/post/${postID}/usercommentpost`, {
+        fetch(`odin-book-repo-production.up.railway.app/socialMediaApp/post/post/${postID}/usercommentpost`, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -281,7 +281,7 @@ function getProfileAndPosts() {
             userID: userId
         }
     
-        fetch(`http://localhost:3000/socialMediaApp/post/post/${postID}/likepost`, {
+        fetch(`odin-book-repo-production.up.railway.app/socialMediaApp/post/post/${postID}/likepost`, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -312,7 +312,7 @@ function signOutButton() {
         const signOutProfileBD ={
 
         }
-                    fetch(`http://localhost:3000/socialMediaApp/user/put/signout/${userId}/passport`, {
+                    fetch(`odin-book-repo-production.up.railway.app/socialMediaApp/user/put/signout/${userId}/passport`, {
                         method: "POST",
                         headers: {
                             "Content-Type": "application/json"
