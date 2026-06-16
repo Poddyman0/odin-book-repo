@@ -17,7 +17,7 @@ function getUserPic() {
         let userId = localStorage.getItem('userIDSignedIn');
         const userTokenSignedIn = localStorage.getItem('userTokenSignedIn');
 
-                fetch(`odin-book-repo-production.up.railway.app/socialMediaApp/user/get/${userId}/userprofilepictureget`, {
+                fetch(`/socialMediaApp/user/get/${userId}/userprofilepictureget`, {
                     method: 'GET',
                     headers: {
                     'Content-Type': 'application/json',
@@ -58,7 +58,7 @@ function updateUserPic () {
       const formData = new FormData();
       formData.append("image", file);
   
-      fetch(`odin-book-repo-production.up.railway.app/socialMediaApp/user/put/${userId}/profileimageupload`, {
+      fetch(`/socialMediaApp/user/put/${userId}/profileimageupload`, {
         method: "POST",
         headers: {
           'Authorization': `Bearer ${userTokenSignedIn}`
@@ -98,7 +98,7 @@ JS:
             profilePictureURL: userPicURL.value
         }
 
-        fetch(`odin-book-repo-production.up.railway.app/socialMediaApp/user/put/${userId}/userprofilepictureupdate`, {
+        fetch(`/socialMediaApp/user/put/${userId}/userprofilepictureupdate`, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',

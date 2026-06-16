@@ -16,7 +16,7 @@ function getUsers () {
     const addFollowingRadioContainer = document.getElementById('add-following-radio-container')
     const userId = localStorage.getItem('userIDSignedIn');
     const userTokenSignedIn = localStorage.getItem('userTokenSignedIn');
-    fetch(`odin-book-repo-production.up.railway.app/socialMediaApp/users/get`, {
+    fetch(`/socialMediaApp/users/get`, {
         method: 'GET',
         headers: {
         'Content-Type': 'application/json',
@@ -84,7 +84,7 @@ function createUser () {
         });
         console.log("createProfileBE", createProfileBE)
 
-        fetch('odin-book-repo-production.up.railway.app/socialMediaApp/user/post', {
+        fetch('/socialMediaApp/user/post', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json", 
@@ -114,7 +114,7 @@ function createProfilePicture (userID) {
     const formData = new FormData();
     formData.append("image", file);
 
-    fetch(`odin-book-repo-production.up.railway.app/socialMediaApp/user/put/${userID}/profileimageupload`, {
+    fetch(`/socialMediaApp/user/put/${userID}/profileimageupload`, {
       method: "POST",
       headers: {
         'Authorization': `Bearer ${userTokenSignedIn}`

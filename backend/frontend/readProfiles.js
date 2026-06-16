@@ -18,7 +18,7 @@ function readUsers() {
     const userId = localStorage.getItem('userIDSignedIn');
         const userTokenSignedIn = localStorage.getItem('userTokenSignedIn');
 
-        fetch(`odin-book-repo-production.up.railway.app/socialMediaApp/users/get/${userId}/followrequest`, {
+        fetch(`/socialMediaApp/users/get/${userId}/followrequest`, {
             method: 'GET',
             headers: {
             'Content-Type': 'application/json',
@@ -73,7 +73,7 @@ function updateFollowers(followerID) {
             followingRequest: followerID,
             
         }
-        fetch(`odin-book-repo-production.up.railway.app/socialMediaApp/user/put/${userId}/userfollingupdate`, {
+        fetch(`/socialMediaApp/user/put/${userId}/userfollingupdate`, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',

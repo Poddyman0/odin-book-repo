@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const userID = localStorage.getItem('userIDSignedIn');
     const userToMessage = localStorage.getItem('userToMessage');
   console.log("userToMessage", userToMessage)
-    const socket = io("odin-book-repo-production.up.railway.app", {
+    const socket = io("", {
         auth: {
         serverOffset: 0,
         userID,

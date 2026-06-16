@@ -17,7 +17,7 @@ function getProfileAndPosts() {
     const userId = localStorage.getItem('userIDSignedIn');
     const userTokenSignedIn = localStorage.getItem('userTokenSignedIn');
 
-    fetch(`odin-book-repo-production.up.railway.app/socialMediaApp/user/get/${userId}/getuserandposts`, {
+    fetch(`/socialMediaApp/user/get/${userId}/getuserandposts`, {
             method: 'GET', 
             headers: {
             'Content-Type': 'application/json',
@@ -53,7 +53,7 @@ function createPost() {
                 likes: [],
                 comments: []
             }
-            fetch('odin-book-repo-production.up.railway.app/socialMediaApp/post/post', {
+            fetch('/socialMediaApp/post/post', {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json", 
@@ -86,7 +86,7 @@ function createPicture (postID) {
     const formData = new FormData();
     formData.append("image", file);
 
-    fetch(`odin-book-repo-production.up.railway.app/socialMediaApp/post/post/${postID}/postimageupload`, {
+    fetch(`/socialMediaApp/post/post/${postID}/postimageupload`, {
       method: "POST",
       headers: {
         'Authorization': `Bearer ${userTokenSignedIn}`
